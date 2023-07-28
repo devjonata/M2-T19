@@ -1,0 +1,66 @@
+:root {
+  --background: #212529;
+  --primary: #12b886;
+  --primary-dark: #12b88620;
+  --text-primary: #868e96;
+  --text-secondary: #fefefe;
+  --text-dark: #515252;
+  --padding-default: 0 128px;
+  --radius: 8px;
+  --radius-cart: 12px 12px 0 0;
+  --shadow: 0 4px 40px -20px rgba(255, 255, 255, 0.25);
+  --padding-button: 0.875rem 1.625rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  /* padding: var(--padding-default); */
+}
+
+.header__main {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+button,
+.search__icon {
+  padding: var(--padding-button);
+
+  border: 1px solid var(--primary-dark);
+  border-radius: var(--radius);
+  background-color: var(--primary-dark);
+  color: var(--primary);
+
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover,
+.search__icon:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+
+  color: var(--text-secondary);
+}
+
+input {
+  padding: var(--padding-button);
+
+  border: 2px solid var(--text-secondary);
+  border-radius: var(--radius);
+
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primary);
+}

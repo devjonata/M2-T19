@@ -1,0 +1,176 @@
+/*
+
+UNIDADES DE MEDIDAS RELATIVAS
+
+Tela como referência:
+
+vw -> viewport width, utiliza a largura da tela como referência, utlizamos um número fazendo alusão à porcentagem da largura, ex: 100vw
+
+vh -> viewport height, utiliza a altura da tela como referência, utlizamos um número fazendo alusão à porcentagem da altura, ex: 100vh
+
+Em uma tela de 368px de largura 100vw === 368px -> 10vw === 36.8px
+Em uma tela de 268px de largura 100vw === 268px -> 10vw === 26.8px
+
+Elemento pai como referência:
+
+% -> utiliza o tamanho do elemento pai como referência, ou seja, se um elemento filho possuir um width de 50%, isso significa que ele possui metade da largura do seu elemento pai
+
+ em -> 1em equivale a 16px, porém ao utilizarmos em em um elemento filho, ele escalonará com o em do seu elemento pai, por exemplo, se uma lista possui uma fonte com 2em de tamanho, e eu colocar nas li's uma fonte com tamanho de 2em, as li's terão na verdade uma fonte com 4em de tamanho
+
+ Unidade de medida relativa:
+
+ rem -> rem faz referência ao tamanho da fonte utilizada no navegador do usuário
+
+  Unidades fixas:
+
+  px -> 1px sempre será 1px independente da tela em que será renderizada
+  
+*/
+
+.filter__container {
+  margin: 2rem 0;
+  padding: 0 1rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.buttons__container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
+}
+
+.filter__button {
+  min-width: 186px;
+}
+
+.search__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.list__container,
+.list__item,
+.nutrients__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nutrients__list,
+.item__department {
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.cart__container {
+  width: 80%;
+}
+
+.cart__header {
+  background-color: var(--primary);
+  border-radius: var(--radius-cart);
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  height: 2.5rem;
+  padding: 0 2rem;
+
+  color: var(--text-secondary);
+}
+
+.cart__icon {
+  width: 30px;
+}
+
+.cart__title {
+  font-size: 1.2rem;
+}
+
+.products__container,
+.empty__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.empty__container {
+  margin-top: 4rem;
+}
+
+.empty__text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/*
+  min-width: telas a partir de alguma largura
+  max-width: telas que tenham até alguma largura
+*/
+
+@media (min-width: 880px) {
+  .buttons__container {
+    justify-content: center;
+  }
+
+  .list__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter__container {
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .buttons__container {
+    overflow-x: unset;
+  }
+  .main__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 90%;
+    margin: 3rem auto 0 auto;
+  }
+
+  .list__container {
+    border: 1px solid var(--text-dark);
+    border-radius: var(--radius);
+    padding: 2rem;
+  }
+
+  .item__button {
+    font-size: 0.625rem;
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+  }
+
+  .cart__container {
+    width: 40%;
+    align-self: flex-start;
+  }
+}

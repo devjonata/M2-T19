@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+div {
+  width: 100%;
+  /* width: 100vw; */
+  height: 300px;
+  background-color: aquamarine;
+  margin-bottom: 20px;
+}
